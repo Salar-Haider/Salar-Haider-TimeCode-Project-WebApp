@@ -63,7 +63,7 @@ Here’s how you can set up the project locally.
 
 1. **Clone the repository**  
  
-   git clone https://github.com/TimeCode-Planner-WebApp.git  
+   git clone [https://github.com/TimeCode-Planner-WebApp.git ](https://github.com/Salar-Haider/TimeCode-Planner-WebApp.git) 
    cd Salar-Haider-TimeCode-Project-WebApp  
 
 

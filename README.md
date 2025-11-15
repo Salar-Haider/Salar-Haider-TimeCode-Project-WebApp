@@ -64,21 +64,22 @@ Here’s how you can set up the project locally.
 1. **Clone the repository**  
  
    git clone https://github.com/TimeCode-Planner-WebApp.git
+   
    cd Salar-Haider-TimeCode-Project-WebApp  
 
 
-2. **Open the project in NetBeans**
+3. **Open the project in NetBeans**
 
    * Launch NetBeans
    * Use “Open Project” → navigate to the cloned folder → select the project
 
-3. **Configure Supabase**
+4. **Configure Supabase**
 
    * Create a new project in Supabase
    * Obtain your Supabase URL and anon/public API key
    * Add these credentials in your Java application (e.g., in a `config` file or environment variables)
 
-4. **Build project**
+5. **Build project**
 
    * Use NetBeans’ build command or run `ant build` (if your project uses Ant)
    * Resolve any dependencies

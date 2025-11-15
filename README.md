@@ -62,7 +62,7 @@ Here’s how you can set up the project locally.
 ### Installation
 
 1. **Clone the repository**  
-   ```bash
+ 
    git clone https://github.com/Salar-Haider/Salar-Haider-TimeCode-Project-WebApp.git  
    cd Salar-Haider-TimeCode-Project-WebApp  
 ````

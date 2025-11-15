@@ -65,7 +65,7 @@ Here’s how you can set up the project locally.
  
    git clone https://github.com/Salar-Haider/Salar-Haider-TimeCode-Project-WebApp.git  
    cd Salar-Haider-TimeCode-Project-WebApp  
-````
+
 
 2. **Open the project in NetBeans**
 

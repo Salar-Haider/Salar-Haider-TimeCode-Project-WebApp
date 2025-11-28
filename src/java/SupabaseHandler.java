@@ -20,8 +20,8 @@ public class SupabaseHandler {
     JsonNode jsonResponse;
 
     // Supabase project details
-    private static final String SUPABASE_URL = "https://lsvztvmtsbfjsajfehzi.supabase.co/rest/v1/timetables";
-    private static final String API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxzdnp0dm10c2JmanNhamZlaHppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE4NjQ0MjMsImV4cCI6MjA0NzQ0MDQyM30.yoHW49XDquGAWNHVvb1MnFh_7DCZyw4pBGW0aD09fow";
+    private static final String SUPABASE_URL = "YOUR SUPABASE URL";
+    private static final String API_KEY = "YOUR API KEY";
 
     // HTTP client to communicate with Supabase
     private final HttpClient httpClient;
@@ -121,8 +121,8 @@ public class SupabaseHandler {
     
     
     public void signOutUser(String accessToken) {
-    String supabaseSignOutUrl = "https://lsvztvmtsbfjsajfehzi.supabase.co/auth/v1/logout";
-    String apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxzdnp0dm10c2JmanNhamZlaHppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE4NjQ0MjMsImV4cCI6MjA0NzQ0MDQyM30.yoHW49XDquGAWNHVvb1MnFh_7DCZyw4pBGW0aD09fow";
+    String supabaseSignOutUrl = "YOUR SUPABASE LOGOUT URL";
+    String apiKey = "YOUR API KEY";
 
     try {
         // Create HTTP client
@@ -411,7 +411,7 @@ public class SupabaseHandler {
         String requestBody = "{\"uuid\":\"" + userID + "\"}";
 
         // Create the HTTP POST request with the fully qualified function name
-        String functionURL = "https://lsvztvmtsbfjsajfehzi.supabase.co/rest/v1/rpc/check_user_exists"; // Use the correct schema
+        String functionURL = "YOUR FUNCTION URL"; // Use the correct schema
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(functionURL))
@@ -563,7 +563,7 @@ public class SupabaseHandler {
         String json = objectMapper.writeValueAsString(loginData);
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://lsvztvmtsbfjsajfehzi.supabase.co/auth/v1/token?grant_type=password"))  // Ensure this URL is correct
+                .uri(URI.create("YOUR LOGIN URL"))  // Ensure this URL is correct
                 .header("Content-Type", "application/json")
                 .header("apikey", API_KEY)    // Ensure the API_KEY is valid
                 .POST(HttpRequest.BodyPublishers.ofString(json))
@@ -635,7 +635,7 @@ public class SupabaseHandler {
 
                 // Send the insert request to add the activity
                 HttpRequest insertRequest = HttpRequest.newBuilder()
-                        .uri(URI.create("https://lsvztvmtsbfjsajfehzi.supabase.co/rest/v1/timetables"))
+                        .uri(URI.create("YOUR ADDING ACTIVITY URL"))
                         .header("Content-Type", "application/json")
                         .header("apikey", API_KEY)
                         .header("Authorization", "Bearer " + API_KEY)
@@ -686,7 +686,7 @@ public class SupabaseHandler {
 
         // Send the request to the Supabase signup endpoint
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://lsvztvmtsbfjsajfehzi.supabase.co/auth/v1/signup"))
+                .uri(URI.create("https://---------------.supabase.co/auth/v1/signup")) // add your proper url
                 .header("Content-Type", "application/json")
                 .header("apikey", API_KEY)
                 .POST(HttpRequest.BodyPublishers.ofString(jsonData))
@@ -720,3 +720,4 @@ public class SupabaseHandler {
     
 
 }
+
